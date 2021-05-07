@@ -24,6 +24,15 @@
   </ul>
 </nav>
 
+<div [ngSwitch]="(currentPage + 1) % 2">
+  <div *ngSwitchCase="0">
+    Current Page is Even
+  </div>
+  <div *ngSwitchDefault>
+    Current Page is Odd
+  </div>
+</div>
+
 <div>
   <h4>{{ images[currentPage].title }}</h4>
   <img [src]="images[currentPage].url"/>
